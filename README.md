@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Es un proyecto que he realizado por mi cuenta, la cual trata de extraer de una api, todas las películas populares del momento, que van cambiando a medida que pasa el tiempo. En este proyecto, los objetivos son varios, uno de ellos es buscar mediante el search del input los títulos de las películas (lo más parecido al valor ingresado), ordenarlas también de forma ascendente y descendente según el número de popularidad que tengan y ordenarlas según su género. Además de todo esto, poder crear películas nuevas mediante un formulario, las cuales se guardan en una base de datos y son mostradas en conjunto con las de la api. Cabe destacar que solamente las películas creadas por nosotros, pueden ser eliminadas y editadas.
+Es un proyecto que he realizado por mi cuenta, la cual trata de extraer de una api, todas las películas populares del momento, que van cambiando a medida que pasa el tiempo. En el mismo, los objetivos son varios, uno de ellos es buscar mediante el search del input los títulos de las películas (lo más parecido al valor ingresado), ordenarlas de forma ascendente y descendente según el número de popularidad que tengan y filtrarlas por su género. Además de todo esto, poder crear películas nuevas mediante un formulario, las cuales son guardadas en una base de datos y luego resultan reflejadas en conjunto con las de la api. Cabe destacar que solamente las películas creadas por nosotros, pueden ser eliminadas y editadas.
 
 
 ## Tecnologías
