@@ -7,6 +7,8 @@ Es un proyecto que he realizado por mi cuenta, la cual trata de extraer de una a
 
 ## Tecnologías
 
+Las tecnologías usadas en este proyecto son:
+
 <div>
 <p>
   <img align="left"  src="https://cdn-icons-png.flaticon.com/512/732/732212.png"  alt="imagen "width="90px"/>
