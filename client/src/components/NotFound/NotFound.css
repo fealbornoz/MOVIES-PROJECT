@@ -1,0 +1,32 @@
+.containerNotFound {
+  background-image: url("../../assets/background\ not\ found\ page.jpg");
+  height: 100vh;
+  width:100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonNotFound{
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  cursor:pointer;
+  margin-top:15px;
+  border:none;
+  border-radius:5px;
+}
+
+.buttonNotFound:hover{
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  cursor:pointer;
+  margin-top:15px;
+  border:none;
+  border-radius:5px;
+}

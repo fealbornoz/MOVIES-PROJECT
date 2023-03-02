@@ -1,0 +1,116 @@
+
+.containerCard{
+    width: 400px;
+    height:670px;
+    background-image:url("../../assets//background\ movie2.png");
+    background-size:cover;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+
+.imageCard{
+    width: 100%;
+    height: 82.5%;
+    background-size:cover;
+    border-radius: 15px;
+}
+
+
+.linkCard{
+    text-decoration: none;
+}
+
+
+.titleMovie{
+    text-align: center;
+    font-size: 23px;
+    color:white;
+}
+
+.tailCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+
+
+
+.genreCard{
+    margin:auto;
+    color:white;
+    display: inline-block;
+    padding: 8px;
+}
+
+
+.popularityCard{
+    color:white;
+    text-align: center;
+}
+
+
+.movieButtons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.buttonCardDelete{
+    height: 20px;
+    width: 20px;
+    font-weight: bold;
+    background-color: white;
+    color: red;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+}
+
+.buttonCardDelete:hover{
+    height: 20px;
+    width: 20x;
+    font-weight: bold;
+    background-color: red;
+    color:white;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+}
+
+
+.buttonCardEdit{
+    height: 20px;
+    width: 40px;
+    font-weight: bold;
+    background-color: white;
+    color: red;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+}
+
+.buttonCardEdit:hover{
+    height: 20px;
+    width: 40px;
+    font-weight: bold;
+    background-color: red;
+    color:white;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+}
+
+
+.linkCardEdit{
+    text-decoration: none;
+}
+
+
+.genreCardDB{
+    color:white;
+}

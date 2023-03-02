@@ -1,0 +1,23 @@
+body{
+    background-image:url("../../assets/background\ body");
+    background-size:cover;
+}
+
+.containerMoviesCards{
+    margin-top:15px;
+    margin-bottom: 40px;
+}
+
+
+.containerPaginationHome{
+    margin-top: 15px;
+}
+
+.containerCards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 500px));
+    gap: 30px;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+

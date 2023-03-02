@@ -1,0 +1,13 @@
+.containerCards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 500px));
+    gap: 30px;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+
+.containerNotFoundCards{
+    display: flex;
+    justify-content: center;
+}

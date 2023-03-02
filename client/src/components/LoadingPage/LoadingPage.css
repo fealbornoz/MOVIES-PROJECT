@@ -1,0 +1,5 @@
+.containerLoading {
+    height: 100vh;
+    background-image: url("../../assets/loadingHome.gif");
+    background-size: cover;
+}

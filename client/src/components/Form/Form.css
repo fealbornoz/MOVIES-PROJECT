@@ -1,0 +1,119 @@
+.containerFormGlobal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerForm{
+    width:420px;
+    height: 560px;
+    background-color: transparent;
+    border: 2px solid white;
+    padding:15px;
+
+}
+
+.boxInput{
+    padding:5px;
+    margin-top:15px;
+}
+
+.labelForm{
+    color:white;
+}
+
+.inputError{
+    border: 2px solid red;
+    outline:none;
+    width: 100%;
+    height: 30px;
+}
+
+.inputError:focus{
+    border: 2px solid red;
+    outline:none;
+    width: 100%;
+    height: 30px;
+}
+
+
+.inputCorrect{
+    outline:none;
+    width: 100%;
+    height: 30px;
+}
+
+
+
+
+.buttonSubmitForm{
+    margin-top:15px;
+    width: 100px;
+    height: 30px;
+    color:white;
+    background-color: black;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+}
+
+.buttonSubmitForm:hover{
+    margin-top:15px;
+    width: 100px;
+    height: 30px;
+    color:black;
+    background-color: white;
+    border-radius:5px;
+}
+
+
+.buttonBackForm{
+    margin-top:15px;
+    margin-left: 15px;
+    width: 100px;
+    height: 30px;
+    color:white;
+    background-color: black;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+}
+
+
+.buttonBackForm:hover{
+    margin-top:15px;
+    margin-left: 15px;
+    width: 100px;
+    height: 30px;
+    color:black;
+    background-color: white;
+    border-radius:5px;
+}
+
+
+.containerButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="file"]{
+    color:white;
+}
+
+
+.error{
+    color:red;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
+}
+
+.containerError{
+    height: 10px;
+}
+
+.linkForm{
+    text-decoration: none;
+}
