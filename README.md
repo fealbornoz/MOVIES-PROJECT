@@ -24,7 +24,7 @@ Las tecnologías usadas para este proyecto, fueron:
 
 <p><img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png"  alt="imagen "width="90px"/></p>
 
-<p><img align="left" src="https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png"  alt="imagen "width="90px"/></p>
+<p><img align="left" src="https://skillshack.blob.core.windows.net/uploads/express.webp"  alt="imagen "width="90px"/></p>
 
 <p><img align="left" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png"  alt="imagen "width="90px"/></p>
 
