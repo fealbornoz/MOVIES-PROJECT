@@ -7,7 +7,7 @@ Es un proyecto que he realizado por mi cuenta, la cual trata de extraer de una a
 
 ## Tecnologías
 
-Las tecnologías que usé para este proyecto, fueron:
+Las tecnologías que usé para este proyecto,  fueron:
 
 <div>
 <p>
