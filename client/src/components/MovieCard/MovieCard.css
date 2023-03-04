@@ -2,7 +2,7 @@
 .containerCard{
     width: 400px;
     height:670px;
-    background-image:url("../../assets//background\ movie2.png");
+    background-image:url("../../assets/backgroundCard.png");
     background-size:cover;
     padding: 20px;
     border-radius: 15px;

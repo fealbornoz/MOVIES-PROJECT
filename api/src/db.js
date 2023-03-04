@@ -3,7 +3,6 @@ require("dotenv").config();
 
 const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
 //Importar los modelos
-
 const MovieModel = require("./models/Movie");
 
 const sequelize = new Sequelize(
@@ -13,9 +12,7 @@ const sequelize = new Sequelize(
   }
 );
 
-const { Movie } = sequelize.models;
 
-//Pasarle el sequelize a los models y luego aplicar las asociaciones
 MovieModel(sequelize);
 
 module.exports = { sequelize, ...sequelize.models };

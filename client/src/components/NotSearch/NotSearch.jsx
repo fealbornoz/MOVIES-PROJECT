@@ -1,6 +1,5 @@
 import React from "react";
-import notSearch from "../../assets/404.gif"
-import "./NotSearch.css"
+import notSearch from "../../assets/notSearch.gif"
 const NotSearch = () => {
   return (
     <>
