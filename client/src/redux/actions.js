@@ -10,7 +10,7 @@ export const getAllMovies = (setLoading) => {
   setLoading(true);
   return function (dispatch) {
     axios
-      .get(`http://localhost:3001/movies`)
+      .get(`/movies`)
       .then((response) => {
         return response.data;
       })
@@ -25,7 +25,7 @@ export const getAllMovies = (setLoading) => {
 export const getAllMoviesFilter = (input,setPaginate) => {
   return function (dispatch) {
     axios
-      .get(`http://localhost:3001/movies?title=${input}`)
+      .get(`/movies?title=${input}`)
       .then((response) => {
         return response.data;
       })
@@ -40,7 +40,7 @@ export const getAllMoviesFilter = (input,setPaginate) => {
 export const deleteMovie = (id) => {
   return function (dispatch) {
     axios
-      .delete(`http://localhost:3001/movies/${id}`)
+      .delete(`/movies/${id}`)
       .then((response) => {
         return response.data;
       })
@@ -54,7 +54,7 @@ export const getMovieDetail = (id, setLoading) => {
   setLoading(true);
   return function (dispatch) {
     axios
-      .get(`http://localhost:3001/movies/${id}`)
+      .get(`/movies/${id}`)
       .then((response) => {
         return response.data;
       })
@@ -69,7 +69,7 @@ export const getMovieDetail = (id, setLoading) => {
 export const updateMovie = (id, form,navigate) => {
   return function () {
     axios
-      .put(`http://localhost:3001/movies/${id}`, form)
+      .put(`/movies/${id}`, form)
       .then((response) => {
         return alert("It was successfully edited");
       })
@@ -93,7 +93,7 @@ export const orderMovies = (ascOrDesc) => {
 export const createMovie = (form,navigate) => {
   return function () {
     axios
-      .post("http://localhost:3001/movies", form)
+      .post("/movies", form)
       .then((res) => {
         return alert("It was successfully created");
       })
