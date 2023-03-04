@@ -3,8 +3,8 @@ const { Movie } = require("../db");
 const { Op } = require("sequelize");
 
 const axios = require("axios");
-
-const apiKey = "4f5f43495afcc67e9553f6c684a82f84";
+require("dotenv").config();
+const { MOVIES_API_KEY } = process.env;
 
 // const cloudinary = require("../utils/cloudinary");
 
@@ -74,13 +74,13 @@ const cleanDetail = (detail) => {
 
 const searchMovieByTitle = async (title) => {
   const apiMovieForFilter = await axios.get(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US`
+    `https://api.themoviedb.org/3/movie/popular?api_key=${MOVIES_API_KEY}&language=en-US`
   );
   const filteredApiRaw = apiMovieForFilter.data.results.filter((movie) => {
     return movie.title.toLowerCase().includes(title.toLowerCase());
   });
   const genres = await axios.get(
-    "https://api.themoviedb.org/3/genre/movie/list?api_key=4f5f43495afcc67e9553f6c684a82f84&language=en-US"
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${MOVIES_API_KEY}&language=en-US`
   );
   const filteredApi = cleanArray(filteredApiRaw, genres.data);
   const databaseMovies = await Movie.findAll({
@@ -94,10 +94,10 @@ const searchMovieByTitle = async (title) => {
 const getAllMovies = async () => {
   const databaseMovies = await Movie.findAll();
   const apiMoviesRaw = await axios.get(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US`
+    `https://api.themoviedb.org/3/movie/popular?api_key=${MOVIES_API_KEY}&language=en-US`
   );
   const genres = await axios.get(
-    "https://api.themoviedb.org/3/genre/movie/list?api_key=4f5f43495afcc67e9553f6c684a82f84&language=en-US"
+    `https://api.themoviedb.org/3/genre/movie/list?api_key=${MOVIES_API_KEY}&language=en-US`
   );
   const apiMovies = cleanArray(apiMoviesRaw.data.results, genres.data);
 
@@ -108,7 +108,7 @@ const getAllMovies = async () => {
 const getMovieById = async (id, source) => {
   if (source === "api") {
     var movieRaw = await axios.get(
-      `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
+      `https://api.themoviedb.org/3/movie/${id}?api_key=${MOVIES_API_KEY}&language=en-US`
     );
     var movie = cleanDetail(movieRaw.data);
   } else {
