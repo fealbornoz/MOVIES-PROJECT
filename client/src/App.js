@@ -6,7 +6,8 @@ import MovieDetail from "./components/MovieDetail/MovieDetail";
 import Form from "./components/Form/Form";
 import EditMovie from "./components/EditMovie/EditMovie";
 import NotFound from "./components/NotFound/NotFound";
-
+import axios from "axios"
+axios.defaults.baseURL = "https://movies-project-production.up.railway.app/"
 
 function App() {
   return (
