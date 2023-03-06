@@ -10,7 +10,8 @@ import "./Form.css";
 const Form = ({ id, editDetail }) => {
   const [form, setForm] = useState({
     title: "",
-    image: "https://res.cloudinary.com/dtsc0hcla/image/upload/v1677717332/mfjrtrdorjv0awfaearr.webp",
+    image:
+      "https://res.cloudinary.com/dtsc0hcla/image/upload/v1677717332/mfjrtrdorjv0awfaearr.webp",
     overview: "",
     release_date: "",
     genres: "",
@@ -28,7 +29,7 @@ const Form = ({ id, editDetail }) => {
 
   const setImage = async (e) => {
     const result = await postImageToCloudinary(e);
-    console.log(result)
+    console.log(result);
     if (result) {
       setForm({ ...form, [e.target.name]: result });
     }
@@ -48,7 +49,7 @@ const Form = ({ id, editDetail }) => {
       if (Object.values(error).length !== 0) {
         alert("Complete the data");
       } else if (Object.values(error).length === 0) {
-        dispatch(createMovie(form,navigate));
+        dispatch(createMovie(form, navigate));
         // navigate("/home");
         setForm({
           ...form,
@@ -61,12 +62,13 @@ const Form = ({ id, editDetail }) => {
         });
       }
     } else {
-      dispatch(updateMovie(id, form,navigate));
+      dispatch(updateMovie(id, form, navigate));
       // navigate("/home");
     }
   };
   const handleInput = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    console.log(form)
     setError(validate({ ...form, [e.target.name]: e.target.value }));
   };
 
@@ -115,8 +117,10 @@ const Form = ({ id, editDetail }) => {
               <label className="labelForm" htmlFor="">
                 Overview
               </label>
-              <input
-                className={error.overviewError ? "inputError" : "inputCorrect"}
+              <textarea
+                className={
+                  error.overviewError ? "inputErrorArea" : "inputCorrectArea"
+                }
                 type="text"
                 name="overview"
                 onChange={(e) => handleInput(e)}
@@ -159,9 +163,7 @@ const Form = ({ id, editDetail }) => {
                 value={form.genres}
               /> */}
               <select
-                className={
-                  error.genresError ? "inputError" : "inputCorrect"
-                }
+                className={error.genresError ? "inputError" : "inputCorrect"}
                 name="genres"
                 onChange={(e) => handleInput(e)}
               >
