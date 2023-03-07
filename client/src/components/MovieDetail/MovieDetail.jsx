@@ -30,7 +30,9 @@ const MovieDetail = () => {
     <>
       <div className="containerGlobalDetail">
         <div className="detailCard">
+          <div className="containerImageDetail">
             <img className="imageDetail" src={movieDetail.image} alt="imagen" />
+            </div>
           <div className="overviewDetail">
             <div className="containerHeadDetail">
               <h1 className="titleDetail">{movieDetail.title}</h1>
