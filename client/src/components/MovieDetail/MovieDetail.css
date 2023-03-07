@@ -126,4 +126,17 @@
     padding: 10px;
     font-size: 25px;
   }
+  .overviewOrigin {
+    font-size: 5px;
+  }
+
+  .overviewDetail {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    font-size:15px;
+  }
 }
