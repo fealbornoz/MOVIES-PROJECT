@@ -11,3 +11,15 @@
     display: flex;
     justify-content: center;
 }
+
+
+@media only screen and (max-width:500px){
+    .containerCards{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+        gap: 30px;
+        justify-items: center;
+        justify-content: space-evenly;
+    }
+    
+}

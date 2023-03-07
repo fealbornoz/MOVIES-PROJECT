@@ -19,7 +19,7 @@ describe("Movies Routes", () => {
     it("Returns the list of all movies that match the entered name filter", async () => {
       process.nextTick(() => {});
       const res = await request(app).get(
-        "/movies?title= Black, Panther:, Wakanda, Forever"
+        "/movies?title=Black Panther: Wakanda Forever"
       );
       expect(res.statusCode).toBe(200);
       expect(res.type).toEqual("application/json");
@@ -30,8 +30,9 @@ describe("Movies Routes", () => {
           image:"https://image.tmdb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
           overview: "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
           release_date: "2022-11-09",
-          genres: "Action",
-          popularity: 2678.485,
+          genres: ["Action","Adventure","Science Fiction"],
+          popularity: 3095.305,
+          created:false,
         }),
       ]);
     });
