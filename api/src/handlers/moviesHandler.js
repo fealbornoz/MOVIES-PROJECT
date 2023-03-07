@@ -28,7 +28,7 @@ const getMovieHandler = async (req, res) => {
     const movie = await getMovieById(id, source);
     res.status(200).send(movie);
   } catch (error) {
-    return res.status(400).send({ error: error.message });
+    return res.status(404).send({ error: "Movie not found" });
   }
 };
 
@@ -46,7 +46,7 @@ const createMovieHandler = async (req, res) => {
     );
     res.status(200).send(newMovie);
   } catch (error) {
-    return res.status(404).send({ error: error.message });
+    return res.status(404).send({ error: "Missing required fields!" });
   }
 };
 
@@ -66,7 +66,7 @@ const setMovieHandler = async (req, res) => {
     );
     res.status(200).send(updateMovie);
   } catch (error) {
-    return res.status(400).send({ error: error.message });
+    return res.status(404).send({ error: error.message });
   }
 };
 
@@ -83,7 +83,7 @@ const deleteMovieHandler = async (req, res) => {
       return res.status(200).send(movieDelete);
     }
   } catch (error) {
-    return res.status(400).send({ error: error.message });
+    return res.status(404).send({ error: error.message });
   }
 };
 

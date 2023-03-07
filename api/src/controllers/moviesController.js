@@ -48,7 +48,7 @@ const cleanArray = (arrayApi, arrayGenres) => {
 };
 
 const cleanDetail = (detail) => {
-  const URL_IMAGE = "https://image.tmdb.org/t/p/original";
+  const URL_IMAGE = "https://image.tmdb.org/t/p/w500";
   const pilaGenres = [];
   for (i = 0; i < detail.genres.length; i++) {
     pilaGenres.push(detail.genres[i].name);

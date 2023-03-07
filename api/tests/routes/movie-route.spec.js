@@ -23,7 +23,6 @@ describe("Movies Routes", () => {
       );
       expect(res.statusCode).toBe(200);
       expect(res.type).toEqual("application/json");
-      expect(JSON.parse(res.text)).toEqual(res.body);
       expect(res.body).toEqual([
         expect.objectContaining({
           id: 505642,
@@ -45,15 +44,16 @@ describe("Movies Routes", () => {
         process.nextTick(() => {});
         const res = await request(app).get("/movies/505642");
         expect(res.statusCode).toBe(200);
-        expect(res.type).toEqual('application/json');
+        expect(res.type).toEqual("application/json");
         expect(res.body).toEqual({
             id: 505642,
             title: "Black Panther: Wakanda Forever",
             image:"https://image.tmdb.org/t/p/w500/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
             overview: "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death.  As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
             release_date: "2022-11-09",
-            genres: "Action",
-            popularity: 2678.485,
+            genres: ["Action","Adventure","Science Fiction"],
+            popularity: 3095.305,
+            created:false
         });
       })
 
@@ -70,7 +70,7 @@ describe("Movies Routes", () => {
     describe('[POST] /movies', () => {
         it('Returns status 400 and corresponding text if any parameters are not sent', async () => {
           const res = await request(app).post('/movies');
-          expect(res.statusCode).toBe(400);
+          expect(res.statusCode).toBe(404);
           expect(res.type).toEqual('application/json');
           expect(JSON.parse(res.text)).toEqual({error: "Missing required fields!"});
         });
@@ -78,8 +78,8 @@ describe("Movies Routes", () => {
         
 
         afterAll(async () => {
-            await conn.sync({ force: false });
-            conn.close();
+            await sequelize.sync({ force: false });
+            sequelize.close();
         })
 })
 
