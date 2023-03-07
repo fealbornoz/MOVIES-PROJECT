@@ -1,87 +1,124 @@
-
-.containerGlobalDetail{
-    width: 100vw;
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.containerGlobalDetail {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.detailCard{
+.detailCard {
+  display: flex;
+  width: 700px;
+  height: 600px;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.titleDetail {
+  color: white;
+  padding: 10px;
+}
+
+.overviewDetail {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  padding: 5px;
+}
+
+.imageDetail {
+  width: 400px;
+  height: 100%;
+}
+
+.containerDataDetail {
+  margin-top: 30px;
+}
+
+.containerHeadDetail {
+  margin-top: 30px;
+}
+
+.dataDetail {
+  padding: 5px;
+  color: white;
+}
+
+.buttonDetail {
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.buttonDetail:hover {
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  margin-top: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+.linkDetail {
+  text-decoration: none;
+}
+
+.genreCardDB {
+  color: white;
+}
+
+@media only screen and (max-width: 750px) {
+  .detailCard {
     display: flex;
-    width: 700px;
+    width: 600px;
     height: 600px;
     background-color: transparent;
     border: 2px solid white;
-}
+  }
 
-.titleDetail{
-    color:white;
-    padding: 10px;
-}
-
-
-
-.overviewDetail{
-    display: flex;
-    width: 100%;
-    flex-direction:column;
-    text-align: center;
-    color:white;
-    padding:5px;
-}
-
-
-
-.imageDetail{
-    width:400px;
+  .imageDetail {
+    width: 300px;
     height: 100%;
+  }
 }
 
-.containerDataDetail{
-    margin-top: 30px;
+@media only screen and (min-width: 500px) and (max-width: 750px) {
+  .detailCard {
+    display: flex;
+    width: 550px;
+    height: 600px;
+    background-color: transparent;
+    border: 2px solid white;
+  }
+
+  .imageDetail {
+    width: 300px;
+    height: 100%;
+  }
 }
 
-.containerHeadDetail{
-    margin-top: 30px;
+@media only screen and (max-width: 500px) {
+  .detailCard {
+    display: flex;
+    width: 400px;
+    height: 600px;
+    background-color: transparent;
+    border: 2px solid white;
+  }
+
+  .imageDetail {
+    width: 200px;
+    height: 100%;
+  }
 }
-
-.dataDetail{
-    padding: 5px;
-    color:white;
-}
-
-.buttonDetail{
-    height: 40px;
-    width: 100px;
-    font-weight: bold;
-    background-color: black;
-    color: white;
-    cursor:pointer;
-    margin-top:15px;
-    border:none;
-    border-radius:5px;
-}
-
-.buttonDetail:hover{
-    height: 40px;
-    width: 100px;
-    font-weight: bold;
-    background-color: white;
-    color: black;
-    cursor:pointer;
-    margin-top:15px;
-    border: none;
-    border-radius:5px;
-}
-
-
-.linkDetail{
-    text-decoration: none;
-}
-
-.genreCardDB{
-    color:white;
-}
-
-
