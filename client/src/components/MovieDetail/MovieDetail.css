@@ -93,7 +93,7 @@
   }
 }
 
-@media only screen and (min-width: 500px) and (max-width: 750px) {
+@media only screen and (min-width: 550px) and (max-width: 750px) {
   .detailCard {
     display: flex;
     width: 550px;
@@ -108,7 +108,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   .detailCard {
     display: flex;
     width: 400px;
@@ -120,5 +120,10 @@
   .imageDetail {
     width: 200px;
     height: 100%;
+  }
+  .titleDetail {
+    color: white;
+    padding: 10px;
+    font-size: 25px;
   }
 }
