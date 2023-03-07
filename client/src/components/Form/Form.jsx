@@ -68,7 +68,6 @@ const Form = ({ id, editDetail }) => {
   };
   const handleInput = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    console.log(form)
     setError(validate({ ...form, [e.target.name]: e.target.value }));
   };
 
@@ -106,10 +105,8 @@ const Form = ({ id, editDetail }) => {
                     return setImage(e);
                   }}
                 />
-                <div className="containerError">
-                  {error.imageError && (
-                    <span className="error">{error.imageError}</span>
-                  )}
+                <div className="containerImage">
+                  <img src={form.image} alt="imagen" className="image"/>
                 </div>
               </div>
             </div>

@@ -9,7 +9,7 @@
 
 .containerForm{
     width:420px;
-    height: 600px;
+    height: 630px;
     background-color: transparent;
     border: 2px solid white;
     padding:15px;
@@ -18,7 +18,7 @@
 
 .boxInput{
     padding:5px;
-    margin-top:15px;
+    margin-top:5px;
 }
 
 .labelForm{
@@ -142,4 +142,17 @@ input[type="file"]{
 
 .linkForm{
     text-decoration: none;
+}
+
+
+.containerImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 80px;
+}
+
+.image{
+    height: 100%;
 }
