@@ -22,6 +22,7 @@
 }
 
 .containerLanding h1 {
+  text-align: center;
   margin: 25px;
   color: white;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.75);

@@ -46,6 +46,10 @@
     padding: 8px;
 }
 
+.genresCard{
+    text-align: center;
+}
+
 
 .popularityCard{
     color:white;
@@ -125,5 +129,13 @@
         padding: 20px;
         border-radius: 15px;
     }
+
+    .titleMovie{
+        text-align: center;
+        font-size: 21px;
+        color:white;
+    }
+
+  
     
 }
