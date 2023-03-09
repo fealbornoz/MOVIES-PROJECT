@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect} from "react";
 import validate from "./validate";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -27,9 +27,24 @@ const Form = ({ id, editDetail }) => {
     popularityError: "",
   });
 
+ 
+
+  useEffect(()=>{
+    if(id && Object.keys(editDetail).length){
+      setForm({ title: editDetail.title,
+        image:
+        editDetail.image,
+        overview: editDetail.overview,
+        release_date: editDetail.release_date,
+        genres: editDetail.genres,
+        popularity: editDetail.popularity,})
+    }
+  },[editDetail,id])
+
+
+
   const setImage = async (e) => {
     const result = await postImageToCloudinary(e);
-    console.log(result);
     if (result) {
       setForm({ ...form, [e.target.name]: result });
     }
@@ -38,6 +53,7 @@ const Form = ({ id, editDetail }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  
   const edit = () => {
     return id && Object.keys(editDetail).length;
   };
@@ -50,20 +66,11 @@ const Form = ({ id, editDetail }) => {
         alert("Complete the data");
       } else if (Object.values(error).length === 0) {
         dispatch(createMovie(form, navigate));
-        // navigate("/home");
-        setForm({
-          ...form,
-          title: "",
-          image: "",
-          overview: "",
-          release_date: "",
-          genres: "",
-          popularity: "",
-        });
+        return alert("It was successfully created");
       }
     } else {
       dispatch(updateMovie(id, form, navigate));
-      // navigate("/home");
+      return alert("It was successfully edited");
     }
   };
   const handleInput = (e) => {
@@ -106,7 +113,11 @@ const Form = ({ id, editDetail }) => {
                   }}
                 />
                 <div className="containerImage">
-                  <img src={form.image} alt="imagen" className="image"/>
+                  <img
+                    className="image"
+                    src={form.image}
+                    alt="imagen"
+                  />
                 </div>
               </div>
             </div>
@@ -165,25 +176,121 @@ const Form = ({ id, editDetail }) => {
                 onChange={(e) => handleInput(e)}
               >
                 <option hidden>Genres</option>
-                <option value="Action">Action</option>
-                <option value="Adventure">Adventure</option>
-                <option value="Animation">Animation</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Crime">Crime</option>
-                <option value="Documentary">Documentary</option>
-                <option value="Drama">Drama</option>
-                <option value="Family">Family</option>
-                <option value="Fantasy">Fantasy</option>
-                <option value="History">History</option>
-                <option value="Horror">Horror</option>
-                <option value="Music">Music</option>
-                <option value="Mistery">Mistery</option>
-                <option value="Romance">Romance</option>
-                <option value="Science Fiction">Science Fiction</option>
-                <option value="TV Movie">TV Movie</option>
-                <option value="Thriller">Thriller</option>
-                <option value="War">War</option>
-                <option value="Western">Western</option>
+                <option
+                  value="Action"
+                  
+                  selected={edit() && editDetail.genres === "Action"? "selected" : "" }
+                >
+                  Action
+                </option>
+                <option
+                  value="Adventure"
+                  selected={edit() && editDetail.genres === "Adventure"? "selected" : "" }
+                >
+                  Adventure
+                </option>
+                <option
+                  value="Animation"
+                  selected={edit() && editDetail.genres === "Animation"? "selected" : "" }
+                >
+                  Animation
+                </option>
+                <option
+                  value="Comedy"
+                  selected={edit() && editDetail.genres === "Comedy"? "selected" : "" }
+                >
+                  Comedy
+                </option>
+                <option
+                  value="Crime"
+                  selected={edit() && editDetail.genres === "Crime"? "selected" : "" }
+                >
+                  Crime
+                </option>
+                <option
+                  value="Documentary"
+                  selected={edit() && editDetail.genres === "Documentary"? "selected" : "" }
+                >
+                  Documentary
+                </option>
+                <option
+                  value="Drama"
+                  selected={edit() && editDetail.genres === "Drama"? "selected" : "" }
+                >
+                  Drama
+                </option>
+                <option
+                  value="Family"
+                  selected={edit() && editDetail.genres === "Family"? "selected" : "" }
+                >
+                  Family
+                </option>
+                <option
+                  value="Fantasy"
+                  selected={edit() && editDetail.genres === "Fantasy"? "selected" : "" }
+                >
+                  Fantasy
+                </option>
+                <option
+                  value="History"
+                  selected={edit() && editDetail.genres === "History"? "selected" : "" }
+                >
+                  History
+                </option>
+                <option
+                  value="Horror"
+                  selected={edit() && editDetail.genres === "Horror"? "selected" : "" }
+                >
+                  Horror
+                </option>
+                <option
+                  value="Music"
+                  selected={edit() && editDetail.genres === "Music"? "selected" : "" }
+                >
+                  Music
+                </option>
+                <option
+                  value="Mistery"
+                  selected={edit() && editDetail.genres === "Mistery"? "selected" : "" }
+                >
+                  Mistery
+                </option>
+                <option
+                  value="Romance"
+                  selected={edit() && editDetail.genres === "Romance"? "selected" : "" }
+                >
+                  Romance
+                </option>
+                <option
+                  value="Science Fiction"
+                  selected={edit() && editDetail.genres === "Science Fiction"? "selected" : "" }
+                >
+                  Science Fiction
+                </option>
+                <option
+                  value="TV Movie"
+                  selected={edit() && editDetail.genres === "TV Movie"? "selected" : "" }
+                >
+                  TV Movie
+                </option>
+                <option
+                  value="Thriller"
+                  selected={edit() && editDetail.genres === "Thriller"? "selected" : "" }
+                >
+                  Thriller
+                </option>
+                <option
+                  value="War"
+                  selected={edit() && editDetail.genres === "War"? "selected" : "" }
+                >
+                  War
+                </option>
+                <option
+                  value="Western"
+                  selected={edit() && editDetail.genres === "Western"? "selected" : "" }
+                >
+                  Western
+                </option>
               </select>
               <div className="containerError">
                 {error.genresError && (

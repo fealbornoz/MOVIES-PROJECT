@@ -41,14 +41,10 @@ export const deleteMovie = (id) => {
   return function (dispatch) {
     axios
       .delete(`/movies/${id}`)
-      .then((response) => {
-        return response.data;
-      })
-      .then((id) => {
         return dispatch({ type: DELETE_MOVIE, payload: id });
-      });
+      }
   };
-};
+
 
 export const getMovieDetail = (id, setLoading) => {
   setLoading(true);
@@ -70,9 +66,6 @@ export const updateMovie = (id, form,navigate) => {
   return function () {
     axios
       .put(`/movies/${id}`, form)
-      .then((response) => {
-        return alert("It was successfully edited");
-      })
       .catch((error) => console.log(new Error(error)))
       .finally(()=> navigate("/home"))
   }
@@ -94,9 +87,6 @@ export const createMovie = (form,navigate) => {
   return function () {
     axios
       .post("/movies", form)
-      .then((res) => {
-        return alert("It was successfully created");
-      })
       .catch((error) => console.log(new Error(error)))
       .finally(()=> navigate("/home"))
   };
